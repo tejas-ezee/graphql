@@ -1,0 +1,51 @@
+query getData{
+  getTask(id:"1"){
+    id
+  }
+}
+
+query getAllData{
+  getTasks{
+    id
+    description
+    title
+    completed
+  }
+}
+
+mutation addData{
+  addTask(input:{
+    title:"Test is"
+    description:"Test is"
+  })
+  {
+    id
+    title
+    description
+    completed
+  }
+}
+
+mutation updateData{
+  updateTask(input:{
+    id:"4"
+    title:"Test is"
+    description:"Test is"
+    completed:true
+  })
+  {
+    id
+    title
+    description
+    completed
+  }
+}
+
+mutation deleteData{
+  deleteTask(id:"6"){
+    id
+    title
+    description
+    completed
+  }
+}

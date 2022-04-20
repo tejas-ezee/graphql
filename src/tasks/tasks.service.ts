@@ -17,8 +17,6 @@ export class TasksService {
 
   async addTask(input: AddTaskInput): Promise<Task[]> {
     const lastTask = this.tasks.slice(-1).pop();
-    console.log('----lastTask----');
-    console.log(lastTask);
     const task: Task = {
       id: (parseInt(lastTask.id) + 1).toString(),
       title: input.title,

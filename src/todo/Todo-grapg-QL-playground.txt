@@ -1,0 +1,76 @@
+mutation createTodo {
+  createNewTodo(createTodoInput:{
+    name:"data"
+    location:"surat"
+    email:"tejc63@gmail.com"
+    mobile:"9725036879"
+  }){
+    id
+    location
+    name
+    email
+    mobile
+  }
+}
+
+mutation createTodoWithAllData {
+  createNewTodoWithFetchAllTodo(createTodoInput:{
+    name:"data"
+    location:"surat"
+    email:"tejc63@gmail.com"
+    mobile:"9725036879"
+  }){
+    id
+    location
+    name
+    email
+    mobile
+  }
+}
+
+mutation updateDataWithAllData{
+  updateTodoById(updateTodoInput:{
+    id:5
+    location:"ABC"
+  	name:"Tejas"
+    email:"tc631991@gmail.com"
+    mobile:"9989855632"
+  }){
+    id
+    location
+    name
+    email
+    mobile
+  }
+}
+
+query getAllTodo {
+  allTodo{
+    id
+    location
+    name
+    email
+    mobile
+  }
+}
+
+query getOneTodo {
+  getTodoById(id:1){
+    id
+    location
+    mobile
+    email
+    name
+  }
+}
+
+
+mutation deleteTodo {
+  removeTodoById(id:4){
+    id
+    location
+    name
+    email
+    mobile
+  }
+}
